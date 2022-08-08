@@ -1,0 +1,32 @@
+
+modLoader="javafml" #mandatory
+loaderVersion="[40,)" 
+license="MIT"
+#issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" #optional
+# A list of mods - how many allowed here is determined by the individual mod loader
+[[mods]]
+modId="pogtweaks" 
+version="${file.jarVersion}"
+displayName="Pogcraft Tweaks"
+logoFile="examplemod.png" #optional
+credits="" #optional
+authors="Me" #optional
+description='''
+Various tweaks and additions for our packs
+'''
+
+[[dependencies.pogtweaks]]
+    modId="forge"
+    mandatory=true
+    versionRange="[40,)" 
+    # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
+    ordering="NONE"
+    # Side this dependency is applied on - BOTH, CLIENT or SERVER
+    side="BOTH"
+    
+[[dependencies.pogtweaks]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.18.2,1.19)"
+    ordering="NONE"
+    side="BOTH"
