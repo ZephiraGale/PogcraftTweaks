@@ -1,3 +1,4 @@
 {
-    "item.pogtweaks.example_item" : "Example item"
+    "item.pogtweaks.example_item" : "Example item",
+    "itemGroup.pogtweaks" : "PogCraft Tweaks"
 }

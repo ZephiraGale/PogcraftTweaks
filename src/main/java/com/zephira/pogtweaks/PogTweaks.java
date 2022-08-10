@@ -3,6 +3,7 @@ package com.zephira.pogtweaks;
 import org.apache.commons.lang3.ObjectUtils.Null;
 
 import com.mojang.datafixers.types.templates.List;
+import com.zephira.pogtweaks.init.BlockInit;
 import com.zephira.pogtweaks.init.ItemInit;
 
 import net.minecraft.world.item.CreativeModeTab;
@@ -33,6 +34,7 @@ public class PogTweaks {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ItemInit.ITEMS.register(bus);
+        BlockInit.BLOCKS.register(bus);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
