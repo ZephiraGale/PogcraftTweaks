@@ -4,7 +4,6 @@ import com.google.common.base.Supplier;
 import com.zephira.pogtweaks.PogTweaks;
 
 import net.minecraft.world.item.Item;
-import net.minecraftforge.event.RegistryEvent.Register;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
