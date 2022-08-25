@@ -3,11 +3,12 @@ package com.zephira.pogtweaks.init;
 import java.util.function.Function;
 import com.google.common.base.Supplier;
 import com.zephira.pogtweaks.PogTweaks;
+import com.zephira.pogtweaks.block.ReinforcedObsidian;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SoundType;
+//import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
@@ -20,7 +21,7 @@ public class BlockInit {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, PogTweaks.MOD_ID);
     public static final DeferredRegister<Item> ITEMS = ItemInit.ITEMS;
 
-    public static final RegistryObject<Block> Example_Block = register ("example_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_PURPLE).strength(3.0f).sound(SoundType.METAL).requiresCorrectToolForDrops()) , object -> () -> new BlockItem(object.get(), new Item.Properties().tab(PogTweaks.TWEAKS_TAB)));
+    public static final RegistryObject<Block> REINFORCED_OBSIDIAN = register ("reinforced_obsidian", () -> new ReinforcedObsidian(BlockBehaviour.Properties.of(Material.HEAVY_METAL, MaterialColor.COLOR_BLACK).strength(3.5f, 1200.0f).sound(ReinforcedObsidian.TEST).requiresCorrectToolForDrops()) , object -> () -> new BlockItem(object.get(), new Item.Properties().tab(PogTweaks.TWEAKS_TAB).fireResistant()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(final String name, final Supplier<? extends T> block) {
         return BLOCKS.register(name, block);
